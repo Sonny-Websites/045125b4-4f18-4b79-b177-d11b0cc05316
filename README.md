@@ -345,3 +345,8 @@ The contact form uses `action="/__forms/contact"` and is submitted via `public/s
 ---
 
 Built with modern web standards and best practices. Ready for production use!
+
+## Lead-Specific Admin Note (starter-site)
+
+- Temporary form recipient is set in [src/pages/index.astro](src/pages/index.astro) as hidden fields `recipient` and `to`.
+- To switch lead destination later, replace `sonnywebsites@gmail.com` in those hidden inputs.

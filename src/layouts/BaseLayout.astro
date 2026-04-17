@@ -17,8 +17,7 @@ const sitemapHref = Astro.site
       Astro.site.href.endsWith('/') ? Astro.site.href : `${Astro.site.href}/`
     ).href
   : undefined;
-const siteTitle = title.includes(' - ') ? title : `${title} - My Site`;
-const metaDescription = description ?? 'Our landing page offers top-notch services and solutions for your business needs.';
+const metaDescription = description ?? 'Simple placeholder landing page to collect leads and showcase your offering.';
 const metaOgTitle = ogTitle ?? title;
 const metaOgDescription = ogDescription ?? metaDescription;
 ---
@@ -34,7 +33,7 @@ const metaOgDescription = ogDescription ?? metaDescription;
     <meta property="og:type" content="website" />
     {sitemapHref && <link rel="sitemap" href={sitemapHref} />}
     {canonical && <link rel="canonical" href={canonical} />}
-    <title>{siteTitle}</title>
+    <title>{title}</title>
     {jsonLd && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
